@@ -1,2 +1,86 @@
 # cli-cpp
-Template for Command Line Interface (CLI) tool in C++
+
+Template for Command Line Interface (CLI) tool in C++ using [argparse](). 
+
+# Development
+
+## Setup for macOS
+
+### Compilers
+
+```bash
+# install Command Line Tools (CLT) for Xcode:
+xcode-select --install
+```
+
+### Homebrew
+
+```bash
+# install
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+### cmake
+
+```bash
+# install
+brew install cmake 
+
+# verify
+cmake --version
+```
+
+### vcpkg
+
+```bash
+# install
+git clone https://github.com/microsoft/vcpkg "$HOME/vcpkg"
+cd $HOME/vcpkg && ./bootstrap-vcpkg.sh
+```
+
+### Visual Studio Code
+
+Download and install from [Visual Studio Code](https://code.visualstudio.com/download) site.
+
+Open Visual Studio Code and press `Cmd + Shift + p`. Select `Shell Command: Install 'code' command in PATH`. 
+
+## Work on macOS
+
+Configure project:
+
+```bash
+source configure.sh
+```
+
+Open the project in Visual Studio Code:
+
+```bash
+code .
+```
+
+### Build
+
+```bash
+# list presets
+cmake --list-presets
+
+# configure and build
+cmake --preset Debug
+cmake --build --preset Debug
+
+# or to build the Release configuration
+cmake --preset Release
+cmake --build --preset Release
+```
+
+###  Run
+
+```bash
+echo "John" > name.txt
+
+./bin/debug/cli-cpp greet name.txt
+./bin/debug/cli-cpp greet --language es name.txt
+./bin/debug/cli-cpp greet -l bg name.txt
+```
+
+### 
