@@ -1,5 +1,5 @@
 Welcome to CLI-CPP's documentation!
-==================================
+===================================
 
 .. toctree::
    :maxdepth: 2
@@ -7,11 +7,8 @@ Welcome to CLI-CPP's documentation!
 
    api/greeting
 
-API Reference
-------------
+Indices and tables
+==================
 
-.. doxygenfunction:: read_name_from_file
-   :project: CLI-CPP
-
-.. doxygenfunction:: generate_greeting
-   :project: CLI-CPP
+* :ref:`genindex`
+* :ref:`search`

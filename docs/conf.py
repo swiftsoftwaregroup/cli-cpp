@@ -1,12 +1,11 @@
 import os
 import subprocess
 
-# -- Project information -----------------------------------------------------
 project = 'CLI-CPP'
 copyright = '2024, Swift Software Group'
 author = 'Swift Software Group'
 
-# -- General configuration ---------------------------------------------------
+# Extensions
 extensions = [
     'breathe',
     'sphinx.ext.autodoc',
@@ -16,8 +15,9 @@ extensions = [
 # Breathe configuration
 breathe_default_project = "CLI-CPP"
 breathe_projects = {
-    "CLI-CPP": "_build/xml"
+    "CLI-CPP": os.path.abspath("xml")
 }
+breathe_default_members = ('members', 'undoc-members')
 
-# Theme configuration
+# Theme
 html_theme = 'sphinx_rtd_theme'

@@ -3,7 +3,8 @@
     "buildPresets": [
         {
             "name": "Debug",
-            "configurePreset": "Debug"
+            "configurePreset": "Debug",
+            "targets": ["all", "docs"]
         },
         {
             "name": "Release",

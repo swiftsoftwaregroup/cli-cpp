@@ -38,6 +38,12 @@ git clone https://github.com/microsoft/vcpkg "$HOME/vcpkg"
 cd $HOME/vcpkg && ./bootstrap-vcpkg.sh
 ```
 
+### doxygen
+
+```bash
+brew install doxygen
+```
+
 ### Visual Studio Code
 
 Download and install from [Visual Studio Code](https://code.visualstudio.com/download) site.
@@ -97,11 +103,31 @@ pushd ./build/Release && ./cli-cpp-test && popd
 
 ### Docs
 
+#### Build
+
+```bash
+# build docs target
+cmake --preset Debug
+cmake --build --preset Debug --target docs
+
+# build docs
+source configure-docs.sh 
+
+# build as html and dirhtml
+pushd docs && make html && make dirhtml && popd
+
+# open in browser
+open docs/_build/html/index.html
+```
+
 #### How to start? 
 
 ```bash
 mkdir -p docs
 cd docs
 sphinx-quickstart
+
+mkdir -p docs/api
+touch docs/api/greeting.rst
 ```
 

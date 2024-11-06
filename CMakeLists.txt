@@ -73,36 +73,20 @@ gtest_discover_tests(cli-cpp-test)
 
 # docs
 find_package(Doxygen REQUIRED)
-find_program(SPHINX_EXECUTABLE sphinx-build REQUIRED)
 
 # Doxygen configuration
-set(DOXYGEN_OUTPUT_DIR ${CMAKE_CURRENT_BINARY_DIR}/docs)
-set(DOXYGEN_INDEX_FILE ${DOXYGEN_OUTPUT_DIR}/xml/index.xml)
-set(DOXYFILE_IN ${CMAKE_CURRENT_SOURCE_DIR}/docs/Doxyfile.in)
-set(DOXYFILE_OUT ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile)
+set(DOXYGEN_OUTPUT_DIR ${PROJECT_SOURCE_DIR}/docs/xml)
+set(DOXYGEN_INDEX_FILE ${DOXYGEN_OUTPUT_DIR}/index.xml)
+set(DOXYFILE_IN ${PROJECT_SOURCE_DIR}/docs/Doxyfile.in)
+set(DOXYFILE_OUT ${PROJECT_SOURCE_DIR}/docs/Doxyfile)
 
 # Configure Doxyfile
 configure_file(${DOXYFILE_IN} ${DOXYFILE_OUT} @ONLY)
 
 # Doxygen target
-add_custom_command(
-    OUTPUT ${DOXYGEN_INDEX_FILE}
+add_custom_target(docs
     COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYFILE_OUT}
     DEPENDS ${PROJECT_SOURCE_DIR}/src/greeting.hpp
-    MAIN_DEPENDENCY ${DOXYFILE_OUT}
-    COMMENT "Generating documentation with Doxygen"
-    VERBATIM
-)
-
-# Sphinx target
-set(SPHINX_SOURCE ${CMAKE_CURRENT_SOURCE_DIR}/docs)
-set(SPHINX_BUILD ${CMAKE_CURRENT_BINARY_DIR}/docs/sphinx)
-set(SPHINX_INDEX_FILE ${SPHINX_BUILD}/index.html)
-
-add_custom_target(docs
-    COMMAND ${SPHINX_EXECUTABLE} -b html
-    ${SPHINX_SOURCE} ${SPHINX_BUILD}
-    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
-    COMMENT "Generating documentation with Sphinx"
+    COMMENT "Generating XML documentation with Doxygen"
     VERBATIM
 )

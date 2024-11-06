@@ -1,6 +1,6 @@
 {
   "dependencies": [
     "argparse",
-    "gtest"    
+    "gtest"
   ]
 }
