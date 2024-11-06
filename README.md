@@ -106,28 +106,16 @@ pushd ./build/Release && ./cli-cpp-test && popd
 #### Build
 
 ```bash
-# build docs target
-cmake --preset Debug
-cmake --build --preset Debug --target docs
-
-# build docs
-source configure-docs.sh 
-
-# build as html and dirhtml
-pushd docs && make html && make dirhtml && popd
-
-# open in browser
-open docs/_build/html/index.html
+# build the docs and open in browser
+source configure-docs.sh
+./docs.sh
 ```
 
-#### How to start? 
+#### How to start the docs?  
 
 ```bash
 mkdir -p docs
 cd docs
 sphinx-quickstart
-
-mkdir -p docs/api
-touch docs/api/greeting.rst
 ```
 

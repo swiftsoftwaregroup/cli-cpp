@@ -29,6 +29,6 @@ pip install --upgrade wheel
 pip install --upgrade pip
 
 # install development and runtime packages
-# pip install -r requirements-docs.txt
+pip install -r requirements-docs.txt
 
 popd > /dev/null

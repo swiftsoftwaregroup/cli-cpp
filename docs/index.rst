@@ -1,9 +1,8 @@
-Welcome to CLI-CPP's documentation!
-===================================
+CLI-CPP
+=======
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 1
 
    api/greeting
 
@@ -11,4 +10,3 @@ Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`search`

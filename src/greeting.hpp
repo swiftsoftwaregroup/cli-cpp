@@ -20,7 +20,7 @@
 ///     // Handle error...
 /// }
 /// ```
-std::string read_name_from_file(const std::string& file_path);
+std::string read_name_from_file (const std::string& file_path);
 
 /// Generate a greeting in the specified language
 ///
@@ -39,4 +39,4 @@ std::string read_name_from_file(const std::string& file_path);
 /// auto greeting = generate_greeting("John", "en"); // Returns "Hello, John!"
 /// auto spanish = generate_greeting("Maria", "es"); // Returns "¡Hola, Maria!"
 /// ```
-std::string generate_greeting(const std::string& name, const std::string& language);
+std::string generate_greeting (const std::string& name, const std::string& language);

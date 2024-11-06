@@ -1,0 +1,10 @@
+sphinx 
+breathe 
+
+# themes
+sphinx-rtd-theme
+pydata-sphinx-theme
+sphinx-book-theme
+sphinx-material
+sphinx-press-theme
+furo
