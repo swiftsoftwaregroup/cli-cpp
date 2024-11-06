@@ -10,14 +10,23 @@
             "configurePreset": "Release"
         }
     ],
+    "testPresets": [
+        {
+            "name": "Debug",
+            "configurePreset": "Debug"
+        },
+        {
+            "name": "Release",
+            "configurePreset": "Release"
+        }
+    ],
     "configurePresets": [
         {
             "name": "Debug",
             "toolchainFile": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
             "binaryDir": "${sourceDir}/build/${presetName}",
             "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug",
-                "CMAKE_RUNTIME_OUTPUT_DIRECTORY": "${sourceDir}/bin/debug"
+                "CMAKE_BUILD_TYPE": "Debug"
             }
         },
         {
@@ -25,8 +34,7 @@
             "toolchainFile": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
             "binaryDir": "${sourceDir}/build/${presetName}",
             "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Release",
-                "CMAKE_RUNTIME_OUTPUT_DIRECTORY": "${sourceDir}/bin/release"
+                "CMAKE_BUILD_TYPE": "Release"
             }
         }
     ]

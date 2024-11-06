@@ -2,5 +2,25 @@
     "cmake.configureOnOpen": true,
     "cmake.buildTask": true,
     "cmake.sourceDirectory": "${workspaceFolder}",
-    "cmake.useCMakePresets": "auto"
+    "cmake.useCMakePresets": "auto",
+    
+    "cmake.ctest.testExplorerIntegrationEnabled": true,
+    
+    "testMate.cpp.debug.configTemplate": {
+        "testMate.cpp.test.executables": "${workspaceFolder}/build/Debug/cli-cpp-test",
+        "type": "cppdbg",
+        "linux": {
+            "type": "cppdbg",
+            "MIMode": "gdb"
+        },
+        "darwin": {
+            "type": "cppdbg",
+            "MIMode": "lldb"
+        },
+        "win32": {
+            "type": "cppvsdbg"
+        },
+        "program": "${exec}",
+        "cwd": "${workspaceFolder}/build/Debug",
+    }
 }

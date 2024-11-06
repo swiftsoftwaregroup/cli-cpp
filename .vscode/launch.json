@@ -10,10 +10,21 @@
             "request": "launch",
             // see: https://code.visualstudio.com/docs/cpp/config-clang-mac
             "osx": {
-                "program": "${workspaceFolder}/bin/cli-cpp",
+                "program": "${workspaceFolder}/build/Debug/cli-cpp",
                 "MIMode": "lldb",
             },
             "cwd": "${workspaceFolder}",
+        },
+        {
+            "name": "Debug C++ Tests",
+            "type": "cppdbg",
+            "request": "launch",
+            // see: https://code.visualstudio.com/docs/cpp/config-clang-mac
+            "osx": {
+                "program": "${workspaceFolder}/build/Debug/cli-cpp-test",
+                "MIMode": "lldb",
+            },
+            "cwd": "${workspaceFolder}/build/Debug",
         }
    ]
 }

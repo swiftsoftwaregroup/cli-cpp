@@ -64,11 +64,11 @@ code .
 # list presets
 cmake --list-presets
 
-# configure and build
+# configure and build Debug
 cmake --preset Debug
 cmake --build --preset Debug
 
-# or to build the Release configuration
+# or to build Release
 cmake --preset Release
 cmake --build --preset Release
 ```
@@ -78,9 +78,19 @@ cmake --build --preset Release
 ```bash
 echo "John" > name.txt
 
-./bin/debug/cli-cpp greet name.txt
-./bin/debug/cli-cpp greet --language es name.txt
-./bin/debug/cli-cpp greet -l bg name.txt
+./build/Debug/cli-cpp greet name.txt
+./build/Debug/cli-cpp greet --language es name.txt
+./build/Debug/cli-cpp greet -l bg name.txt
 ```
 
-### 
+### Test
+
+```bash
+# run via ctest
+ctest --preset Debug
+ctest --preset Release
+
+# run via GoogleTest
+pushd ./build/Debug && ./cli-cpp-test && popd
+pushd ./build/Release && ./cli-cpp-test && popd
+```

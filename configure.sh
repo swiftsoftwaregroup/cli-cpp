@@ -15,3 +15,6 @@ export VCPKG_DISABLE_METRICS=1
 if [[ "$arch" == "aarch64" || "$arch" == "arm64" ]]; then 
     export VCPKG_FORCE_SYSTEM_BINARIES=1
 fi
+
+mkdir -p buid/Debug
+mkdir -p buid/Release
