@@ -10,6 +10,7 @@ extensions = [
     'breathe',
     'sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
+    'myst_parser'
 ]
 
 # Breathe configuration

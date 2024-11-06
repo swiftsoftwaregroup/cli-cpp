@@ -40,8 +40,18 @@ cd $HOME/vcpkg && ./bootstrap-vcpkg.sh
 
 ### doxygen
 
+Needed for docs:
+
 ```bash
 brew install doxygen
+```
+
+### pyenv
+
+Install Python version manager [pyenv](https://github.com/pyenv/pyenv). Also needed for docs:
+
+```bash
+brew install pyenv
 ```
 
 ### Visual Studio Code
@@ -103,15 +113,21 @@ pushd ./build/Release && ./cli-cpp-test && popd
 
 ### Docs
 
+#### Configure
+
+This installs Sphinx, Breathe, and themes:
+
+```bash 
+source configure-docs.sh
+```
+
 #### Build
 
 ```bash
-# build the docs and open in browser
-source configure-docs.sh
 ./docs.sh
 ```
 
-#### How to start the docs?  
+#### How to start docs?  
 
 ```bash
 mkdir -p docs
