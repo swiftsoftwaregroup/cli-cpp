@@ -1,0 +1,10 @@
+OUTPUT_DIRECTORY       = @DOXYGEN_OUTPUT_DIR@
+INPUT                 = @PROJECT_SOURCE_DIR@/src
+RECURSIVE             = YES
+GENERATE_HTML         = NO
+GENERATE_LATEX        = NO
+GENERATE_XML          = YES
+XML_OUTPUT            = xml
+EXTRACT_ALL           = YES
+EXTRACT_PRIVATE       = YES
+EXTRACT_STATIC        = YES

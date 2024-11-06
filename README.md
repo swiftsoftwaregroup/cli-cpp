@@ -94,3 +94,14 @@ ctest --preset Release
 pushd ./build/Debug && ./cli-cpp-test && popd
 pushd ./build/Release && ./cli-cpp-test && popd
 ```
+
+### Docs
+
+#### How to start? 
+
+```bash
+mkdir -p docs
+cd docs
+sphinx-quickstart
+```
+
